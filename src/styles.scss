@@ -16,9 +16,9 @@ body {
   flex-direction: column;
 }
 
-router-outlet {
-  flex: 1; /* Makes the content area take up available space */
-}
+// router-outlet {
+//   flex: 1; /* Makes the content area take up available space */
+// }
 
 app-footer {
   margin-top: auto;
