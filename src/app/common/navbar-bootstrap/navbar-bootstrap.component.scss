@@ -6,17 +6,22 @@ $primary-color: #0F1526; /* Primary color for the footer */
   background-color: $primary-color;
 
   .navbar-brand {
-  display: flex;           /* Use flexbox to control the alignment of children */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center;     /* Center the image vertically */
-    
+    display: flex;           /* Use flexbox to control the alignment of children */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center;     /* Center the image vertically */
 
-  .navbar-logo {
-    height: 100px;          /* Set the desired height for the logo */
-    max-width: 100%;        /* Prevent the image from overflowing */
-    object-fit: contain;    /* Ensure the image maintains its aspect ratio */
-    background-color: white;
-  }
+    .navbar-logo {
+      height: 100px;           /* Set height for the circle */
+      width: 100px;            /* Make width equal to height for a perfect circle */
+      border-radius: 50%;      /* Make it a perfect circle */
+      max-width: 100%;         /* Prevent image overflow */
+      object-fit: contain;     /* Maintain aspect ratio */
+      background-color: white; /* White background for the circle */
+      display: flex;           /* Use flexbox for centering the image inside */
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;        /* Hide any overflowing parts of the image */
+    }
 
     font-weight: bold;
     color: #5fb0d0;
@@ -42,7 +47,8 @@ $primary-color: #0F1526; /* Primary color for the footer */
 
   @media (max-width: 768px) {
     .navbar-logo {
-      height: 80px; /* Slightly smaller for mobile screens */
+      height: 80px;           /* Adjust height for smaller screens */
+      width: 80px;            /* Ensure width matches height */
     }
   }
 }
