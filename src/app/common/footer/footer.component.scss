@@ -1,6 +1,9 @@
+$primary-color: #0F1526; /* Primary color for the footer */
 footer {
-  background-color: #343a40; /* Dark background for the footer */
+  background-color: $primary-color; /* Dark background for the footer */
+  // background-color: red; /* Dark background for the footer */
   color: white; /* Text color */
+  // color: blue; /* Text color */
   text-align: center; /* Center align text */
   padding: 1rem 0;
 
@@ -18,7 +21,8 @@ footer {
       transition: color 0.3s;
 
       &:hover {
-        color: #007bff; /* Change color on hover */
+        // color: #007bff; /* Change color on hover */
+        color: green; /* Change color on hover */
       }
     }
   }

@@ -1,17 +1,22 @@
+$primary-color: #0F1526; /* Primary color for the footer */
+
 .navbar {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 0.75rem 1rem;
+  background-color: $primary-color;
 
   .navbar-brand {
-    display: flex;
-    align-items: center;
+  display: flex;           /* Use flexbox to control the alignment of children */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center;     /* Center the image vertically */
+    
 
-    .navbar-logo {
-      height: 100px; /* Increased height for a bigger logo */
-      max-width: 100%;
-      object-fit: contain;
-      margin-right: 1rem; /* Added more spacing for balance */
-    }
+  .navbar-logo {
+    height: 100px;          /* Set the desired height for the logo */
+    max-width: 100%;        /* Prevent the image from overflowing */
+    object-fit: contain;    /* Ensure the image maintains its aspect ratio */
+    background-color: white;
+  }
 
     font-weight: bold;
     color: #5fb0d0;
