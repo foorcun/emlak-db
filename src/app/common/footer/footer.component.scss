@@ -1,8 +1,25 @@
 footer {
+  background-color: #343a40; /* Dark background for the footer */
+  color: white; /* Text color */
+  text-align: center; /* Center align text */
+  padding: 1rem 0;
+
   a {
     text-decoration: none;
+    color: white;
+
     &:hover {
       text-decoration: underline;
+    }
+
+    i {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #007bff; /* Change color on hover */
+      }
     }
   }
 }
