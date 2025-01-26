@@ -1,3 +1,5 @@
+$primary-color: #0F1526; /* Primary color for the footer */
+
 .ofis-detail-container {
   max-width: 600px;
   margin: 2rem auto;
@@ -37,7 +39,7 @@
   .icon {
     flex: 0 0 auto; /* Prevent the icon from stretching */
     font-size: 1.5rem; /* Set icon size */
-    color: #007bff; /* Icon color */
+    color: $primary-color; /* Icon color */
     display: flex;
     justify-content: center;
     align-items: center;

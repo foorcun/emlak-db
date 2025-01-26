@@ -5,8 +5,18 @@
     </div>
     <div class="details-container">
       <h3 class="emlak-name">{{ card.name }}</h3>
-      <p class="address">{{ card.address }}</p>
-      <p class="tel">{{ card.tel }}</p>
+      <div class="detail-item">
+        <div class="icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <p class="address">{{ card.address }}</p>
+      </div>
+      <div class="detail-item">
+        <div class="icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <p class="tel">{{ card.tel }}</p>
+      </div>
     </div>
   </div>
 </div>
