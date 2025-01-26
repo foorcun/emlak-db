@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DanismanlarimizImageBeltComponent } from './danismanlarimiz-image-belt/danismanlarimiz-image-belt.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-danismanlarimiz-page',
@@ -9,7 +10,7 @@ import { DanismanlarimizImageBeltComponent } from './danismanlarimiz-image-belt/
   imports: [CommonModule, DanismanlarimizImageBeltComponent]
 })
 export class DanismanlarimizPageComponent {
-circleSize = 150; // Size of the circular container
+  circleSize = 150; // Size of the circular container
 
   danismanlar = [
     {
@@ -31,4 +32,10 @@ circleSize = 150; // Size of the circular container
       role: 'Gayrimenkul Danışmanı',
     },
   ];
+  constructor(private router: Router) { }
+
+  navigateToDetail(title: string) {
+    const encodedTitle = encodeURIComponent(title);
+    this.router.navigate([`/danismanlarimiz-page/${encodedTitle}`]);
+  }
 }

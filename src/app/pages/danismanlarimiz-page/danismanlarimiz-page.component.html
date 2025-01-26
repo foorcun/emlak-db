@@ -1,7 +1,11 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-4" *ngFor="let danisman of danismanlar">
-      <div class="card mb-4 card-long">
+      <div
+        class="card mb-4 card-long"
+        (click)="navigateToDetail(danisman.name)"
+        style="cursor: pointer;"
+      >
         <div class="d-flex justify-content-center mt-3">
           <app-danismanlarimiz-image-belt
             [photo]="danisman.photo"
@@ -14,7 +18,10 @@
             <strong>Emlak Ofisi:</strong> {{ danisman.emlakOfisi }}
           </p>
         </div>
-        <div class="card-footer text-center text-white" style="background-color: #6c757d;">
+        <div
+          class="card-footer text-center text-white"
+          style="background-color: #6c757d;"
+        >
           <p class="card-text mb-0">
             <strong>Role:</strong> {{ danisman.role }}
           </p>
