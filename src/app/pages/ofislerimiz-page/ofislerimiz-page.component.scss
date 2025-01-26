@@ -1,59 +1,91 @@
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Grid layout for cards */
   gap: 16px;
   padding: 16px;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid for medium screens */
   }
 
-  // Optionally re-enable for smaller screens
-  // @media (max-width: 480px) {
-  //   grid-template-columns: 1fr;
-  // }
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
 }
 
 .card {
+  display: flex; /* Flexbox for row layout */
+  flex-direction: row; /* Image and details side by side */
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  text-align: center;
   transition: transform 0.2s ease;
+  cursor: pointer;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Add hover effect */
   }
 
   .image-container {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+    flex: 0 0 40%; /* Width proportional to card width */
+    aspect-ratio: 4 / 3; /* Maintain a 4:3 aspect ratio for the image container */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8f8; /* Optional background color */
+    background-color: #f8f8f8;
 
     img {
-      width: 100%; /* Responsive image width */
-      height: 100%; /* Fill the container */
-      object-fit: cover; /* Crop to fit while maintaining aspect ratio */
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image fills the container and crops if necessary */
     }
   }
 
-  .description {
-    padding: 8px;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-}
+  .details-container {
+    flex: 1; /* Take the remaining space */
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-// Adjustments for wide screens to make images slightly less square
-@media (min-width: 1200px) {
-  .card {
+    .emlak-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .address,
+    .tel {
+      font-size: 1rem;
+      color: #555;
+      margin: 4px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
     .image-container {
-      aspect-ratio: 4 / 3; /* Make it slightly rectangular on wide screens */
+      flex: 0 0 30%; /* Reduce image width for medium screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .image-container {
+      flex: 0 0 25%; /* Reduce image width for small screens */
+      aspect-ratio: 1 / 1; /* Switch to a square aspect ratio */
+    }
+
+    .details-container {
+      padding: 12px; /* Adjust padding for smaller screens */
+      .emlak-name {
+        font-size: 1.2rem; /* Slightly smaller font size */
+      }
+      .address,
+      .tel {
+        font-size: 0.9rem; /* Smaller text size for compact display */
+      }
     }
   }
 }

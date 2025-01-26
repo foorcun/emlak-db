@@ -1,8 +1,12 @@
 <div class="cards-container">
   <div class="card" *ngFor="let card of cards" (click)="onCardClick(card)">
     <div class="image-container">
-      <img [src]="card.imageUrl" alt="{{ card.description }}" />
+      <img [src]="card.imageUrl" alt="{{ card.name }}" />
     </div>
-    <div class="description">{{ card.description }}</div>
+    <div class="details-container">
+      <h3 class="emlak-name">{{ card.name }}</h3>
+      <p class="address">{{ card.address }}</p>
+      <p class="tel">{{ card.tel }}</p>
+    </div>
   </div>
 </div>
