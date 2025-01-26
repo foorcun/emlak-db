@@ -6,5 +6,6 @@ export const routes: Routes = [
     { path: "ofislerimiz-page/:title", loadComponent: (() => import('./pages/ofislerimiz-detail-page/ofislerimiz-detail-page.component').then(m => m.OfislerimizDetailPageComponent)) },
     { path: "danismanlarimiz-page", loadComponent: (() => import('./pages/danismanlarimiz-page/danismanlarimiz-page.component').then(m => m.DanismanlarimizPageComponent)) },
     { path: "danismanlarimiz-page/:id", loadComponent: () => import('./pages/danisman-detail-page/danisman-detail-page.component').then(m => m.DanismanDetailPageComponent) },
+    { path: "ilanlar-page", loadComponent: (() => import('./pages/ilanlar-page/ilanlar-page.component').then(m => m.IlanlarPageComponent)) },
 
 ];
