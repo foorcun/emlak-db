@@ -1,16 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { DanismanlarimizImageBeltComponent } from './danismanlarimiz-image-belt/danismanlarimiz-image-belt.component';
 
 @Component({
   selector: 'app-danismanlarimiz-page',
   templateUrl: './danismanlarimiz-page.component.html',
   styleUrls: ['./danismanlarimiz-page.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, DanismanlarimizImageBeltComponent]
 })
 export class DanismanlarimizPageComponent {
-  circleSize = 150; // Size of the circular container (in pixels)
-  imgWidthPercent = 100; // Image width percentage
-  imgHeightPercent = 100; // Image height percentage
+circleSize = 150; // Size of the circular container
 
   danismanlar = [
     {
