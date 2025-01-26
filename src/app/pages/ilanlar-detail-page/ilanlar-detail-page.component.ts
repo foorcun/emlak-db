@@ -4,10 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IlanBilgileriComponentComponent } from './ilan-bilgileri-component/ilan-bilgileri-component.component';
 import { AciklamaComponent } from './aciklama/aciklama.component';
+import { KonumComponent } from './konum/konum.component';
 
 @Component({
   selector: 'app-ilanlar-detail-page',
-  imports: [CommonModule, IlanBilgileriComponentComponent, AciklamaComponent],
+  imports: [CommonModule, IlanBilgileriComponentComponent, AciklamaComponent, KonumComponent],
   templateUrl: './ilanlar-detail-page.component.html',
   styleUrl: './ilanlar-detail-page.component.scss'
 })

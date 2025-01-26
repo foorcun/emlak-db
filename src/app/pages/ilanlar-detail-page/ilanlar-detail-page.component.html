@@ -27,6 +27,16 @@
               Açıklama
             </a>
           </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class.active]="activeTab === 'konum'"
+              (click)="setActiveTab('konum')"
+              href="javascript:void(0)"
+            >
+              Konum
+            </a>
+          </li>
         </ul>
 
         <!-- Tab Content -->
@@ -36,6 +46,13 @@
           </div>
           <div *ngIf="activeTab === 'description'">
             <app-aciklama [description]="ilan.description"></app-aciklama>
+          </div>
+          <div *ngIf="activeTab === 'konum'">
+            <app-konum
+              [adresDetay]="ilan.adresDetay"
+              [adresIl]="ilan.adresIl"
+              [adresIlce]="ilan.adresIlce"
+            ></app-konum>
           </div>
         </div>
       </div>
