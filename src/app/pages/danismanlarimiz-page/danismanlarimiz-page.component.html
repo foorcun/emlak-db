@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let danisman of danismanlar">
+      <div class="card mb-4 card-long">
+        <div
+          class="circle-placeholder"
+          [style.width.px]="circleSize"
+          [style.height.px]="circleSize"
+          style="border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center;"
+        >
+          <img
+            [src]="danisman.photo"
+            alt="Danisman Photo"
+            [style.width.%]="imgWidthPercent"
+            [style.height.%]="imgHeightPercent"
+            style="object-fit: cover; border-radius: 50%;"
+          />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ danisman.name }}</h5>
+          <p class="card-text">
+            <strong>Emlak Ofisi:</strong> {{ danisman.emlakOfisi }}
+          </p>
+          <p class="card-text">
+            <strong>Role:</strong> {{ danisman.role }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

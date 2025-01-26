@@ -1,0 +1,35 @@
+.card-long {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: #f5f5f5; /* Light background in case the image doesn't load */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto;
+//   border: 2px solid red; /* Optional border for styling */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
