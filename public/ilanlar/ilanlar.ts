@@ -7,7 +7,7 @@ export const ILANLAR = [
     adresDetay: 'Bahçeşehir Mahallesi, 12. Sokak No:15',
     adresIl: 'Istanbul',
     adresIlce: 'Başakşehir',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const ILANLAR = [
     adresDetay: 'Atatürk Mahallesi, 5. Cadde No:25',
     adresIl: 'Ankara',
     adresIlce: 'Çankaya',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const ILANLAR = [
     adresDetay: 'Konak Mahallesi, 8. Sokak No:45',
     adresIl: 'Izmir',
     adresIlce: 'Konak',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const ILANLAR = [
     adresDetay: 'Kadıköy Mahallesi, 3. Cadde No:10',
     adresIl: 'Istanbul',
     adresIlce: 'Kadıköy',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const ILANLAR = [
     adresDetay: 'Mevlana Mahallesi, 7. Sokak No:20',
     adresIl: 'Konya',
     adresIlce: 'Selçuklu',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const ILANLAR = [
     adresDetay: 'Etiler Mahallesi, 4. Cadde No:35',
     adresIl: 'Istanbul',
     adresIlce: 'Beşiktaş',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const ILANLAR = [
     adresDetay: 'Yenikent Mahallesi, 9. Sokak No:12',
     adresIl: 'Ankara',
     adresIlce: 'Etimesgut',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ export const ILANLAR = [
     adresDetay: 'Mavişehir Mahallesi, 2. Cadde No:8',
     adresIl: 'Izmir',
     adresIlce: 'Karşıyaka',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ export const ILANLAR = [
     adresDetay: 'Moda Mahallesi, 6. Sokak No:50',
     adresIl: 'Istanbul',
     adresIlce: 'Kadıköy',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ export const ILANLAR = [
     adresDetay: 'Balgat Mahallesi, 1. Cadde No:15',
     adresIl: 'Ankara',
     adresIlce: 'Çankaya',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ export const ILANLAR = [
     adresDetay: 'Alsancak Mahallesi, 5. Sokak No:18',
     adresIl: 'Izmir',
     adresIlce: 'Konak',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ export const ILANLAR = [
     adresDetay: 'Mimar Sinan Mahallesi, 10. Cadde No:25',
     adresIl: 'Bursa',
     adresIlce: 'Nilüfer',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 13,
@@ -127,7 +127,7 @@ export const ILANLAR = [
     adresDetay: 'Küçükyalı Mahallesi, 7. Sokak No:40',
     adresIl: 'Istanbul',
     adresIlce: 'Maltepe',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 14,
@@ -137,7 +137,7 @@ export const ILANLAR = [
     adresDetay: 'Kızılay Mahallesi, 8. Cadde No:30',
     adresIl: 'Ankara',
     adresIlce: 'Çankaya',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 15,
@@ -147,7 +147,7 @@ export const ILANLAR = [
     adresDetay: 'Narlıdere Mahallesi, 3. Sokak No:22',
     adresIl: 'Izmir',
     adresIlce: 'Narlıdere',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 16,
@@ -157,7 +157,7 @@ export const ILANLAR = [
     adresDetay: 'Güzelbahçe Mahallesi, 12. Cadde No:55',
     adresIl: 'Izmir',
     adresIlce: 'Güzelbahçe',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 17,
@@ -167,7 +167,7 @@ export const ILANLAR = [
     adresDetay: 'Bebek Mahallesi, 5. Sokak No:88',
     adresIl: 'Istanbul',
     adresIlce: 'Beşiktaş',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 18,
@@ -177,7 +177,7 @@ export const ILANLAR = [
     adresDetay: 'Batıkent Mahallesi, 4. Cadde No:77',
     adresIl: 'Ankara',
     adresIlce: 'Yenimahalle',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 19,
@@ -187,7 +187,7 @@ export const ILANLAR = [
     adresDetay: 'Osmangazi Mahallesi, 1. Sokak No:5',
     adresIl: 'Bursa',
     adresIlce: 'Osmangazi',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
   {
     id: 20,
@@ -197,7 +197,7 @@ export const ILANLAR = [
     adresDetay: 'Çamlıca Mahallesi, 2. Cadde No:12',
     adresIl: 'Istanbul',
     adresIlce: 'Üsküdar',
-    image: 'images/emlak-image.png',
+    image: 'images/ilan-image.png',
   },
 ];
 
