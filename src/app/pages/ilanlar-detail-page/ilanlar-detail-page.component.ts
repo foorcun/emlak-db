@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ILANLAR } from '../../../../public/ilanlar/ilanlar';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { IlanBilgileriComponentComponent } from './ilan-bilgileri-component/ilan-bilgileri-component.component';
 
 @Component({
   selector: 'app-ilanlar-detail-page',
-  imports: [CommonModule],
+  imports: [CommonModule, IlanBilgileriComponentComponent],
   templateUrl: './ilanlar-detail-page.component.html',
   styleUrl: './ilanlar-detail-page.component.scss'
 })
