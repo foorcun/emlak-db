@@ -1,17 +1,23 @@
-<app-danisman-hero-belt 
-  [danismanName]="selectedDanisman?.name" 
-  [danismanSubtitle]="selectedDanisman?.role">
-</app-danisman-hero-belt>
+<app-danisman-hero-belt
+  [danismanName]="selectedDanisman?.name"
+  [danismanSubtitle]="selectedDanisman?.role"
+  [emlakOfisi]="selectedDanisman?.emlakOfisi"
+></app-danisman-hero-belt>
 
 <div class="container mt-4">
-  <h2 class="text-center">Danışman Detay</h2>
+  <!-- <h2 class="text-center">Danışman Detay</h2> -->
   <div *ngIf="selectedDanisman">
     <div class="text-center">
-      <img [src]="selectedDanisman.photo" alt="{{ selectedDanisman.name }}" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+      <img
+        [src]="selectedDanisman.photo"
+        alt="{{ selectedDanisman.name }}"
+        class="img-fluid rounded-circle"
+        style="width: 150px; height: 150px"
+      />
     </div>
-    <p><strong>Danışman Adı:</strong> {{ selectedDanisman.name }}</p>
-    <p><strong>Emlak Ofisi:</strong> {{ selectedDanisman.emlakOfisi }}</p>
-    <p><strong>Role:</strong> {{ selectedDanisman.role }}</p>
+    <!-- <p><strong>Danışman Adı:</strong> {{ selectedDanisman.name }}</p> -->
+    <!-- <p><strong>Emlak Ofisi:</strong> {{ selectedDanisman.emlakOfisi }}</p> -->
+    <!-- <p><strong>Role:</strong> {{ selectedDanisman.role }}</p> -->
   </div>
   <div *ngIf="!selectedDanisman">
     <p>Danışman bulunamadı.</p>

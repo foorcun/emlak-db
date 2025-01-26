@@ -25,7 +25,7 @@ danismanlar = [
     id: 2,
     photo: 'images/person.png',
     name: 'Elif Demir',
-    emlakOfisi: 'ABC Realty',
+    emlakOfisi: 'ABC Emlak',
     role: 'Broker Owner',
     experience: 15, // Years of experience
   },
