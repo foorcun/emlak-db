@@ -1,8 +1,39 @@
 export const ILANLAR = [
   {
     id: 1,
-    title: 'LAPSEKİ EMEK TATILDE DENIZE 80 METRE TRIPLEKS VILLA',
-    description: 'This is the description for Ilan 1.',
+    title: 'LAPSEKİ EMEK TATİLDE DENİZE 80 METRE TRİPLEKS VİLLA',
+    description: `
+LAPSEKİ EMEK TATİL KÖYÜNDE 280 M² ARSA İÇERİSİNDE 230 M² NET KULLANIM ALANI OLAN MÜSTAKİL 
+EVİMİZ HER DETAYI DÜŞÜNÜLMÜŞ OLUP İTİNALI BİR ŞEKİLDE YAPILMIŞTIR.
+ISINMA İÇİN ISI POMPASI VARDIR VE EV KOMPLE YERDEN ISITMALIDIR. 
+ÇOK EKONOMİK ISINMA DURUMU VARDIR.
+
+Alt Kat:
+- 1 Oda
+- Açık Mutfak Salon
+- Geniş Veranda
+- Banyo
+
+Orta Kat:
+- 3 Adet Oda
+- Banyo
+- Çamaşır Balkonu
+- Geniş Veranda
+
+Teras Katı:
+- 1 Adet Geniş Oda
+- Ebeveyn Banyo
+- Ayrı Mutfak
+- Ön ve Arka Ayrı Teras
+
+Brüt balkonlarla birlikte kullanım alanı 350 m² civarındadır.
+
+Bahçede:
+- Arka tarafta mutfak vardır.
+- Banyo ve tuvalet vardır.
+- 2 adet depo vardır.
+
+Her şey resimlerde görüldüğü gibidir. Oturma ruhsatı ve iskanı tamdır. Krediye uygundur. Alıcısına şimdiden hayırlı olsun.`,
     price: '500,000 TL',
     ilanTarihi: '2025-01-01',
     ilanNo: '123456',
@@ -30,7 +61,8 @@ export const ILANLAR = [
     adresIl: 'Istanbul',
     adresIlce: 'Başakşehir',
     image: 'images/ilan-image.png',
-  },
+  }
+  ,
   {
     id: 2,
     title: 'CANAKKALE LAPSEKI DENIZE SIFIR TINYHOUSE PROJESI TAKSIT FIRSATI',
@@ -256,4 +288,5 @@ export const ILANLAR = [
     image: 'images/ilan-image.png',
   },
 ];
+
 

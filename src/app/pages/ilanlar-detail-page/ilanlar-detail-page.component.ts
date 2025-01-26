@@ -11,13 +11,17 @@ import { IlanBilgileriComponentComponent } from './ilan-bilgileri-component/ilan
   styleUrl: './ilanlar-detail-page.component.scss'
 })
 export class IlanlarDetailPageComponent {
-
   ilan: any;
+  activeTab: string = 'info'; // Default active tab
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     const ilanId = +this.route.snapshot.paramMap.get('id')!; // Get the ID from the route
     this.ilan = ILANLAR.find((i) => i.id === ilanId); // Find the ilan by ID
+  }
+
+  setActiveTab(tab: string) {
+    this.activeTab = tab; // Set the active tab
   }
 }

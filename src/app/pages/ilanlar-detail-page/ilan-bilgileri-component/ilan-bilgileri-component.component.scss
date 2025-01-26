@@ -1,0 +1,14 @@
+.info-row .d-flex {
+  margin-bottom: 10px; /* Space between rows */
+}
+
+.info-row strong {
+  flex-shrink: 0; /* Prevents the label from shrinking */
+  width: 50%; /* Ensure consistent width for labels */
+  text-align: left; /* Align labels to the left */
+}
+
+.info-row span {
+  width: 50%; /* Ensure consistent width for values */
+  text-align: right; /* Align values to the right */
+}

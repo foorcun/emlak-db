@@ -4,16 +4,52 @@
       <img class="card-img-top" [src]="ilan.image" [alt]="ilan.title" />
       <div class="card-body">
         <h1 class="card-title">{{ ilan.title }}</h1>
-        <app-ilan-bilgileri-component [ilan]="ilan"></app-ilan-bilgileri-component>
+
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class.active]="activeTab === 'info'"
+              (click)="setActiveTab('info')"
+              href="javascript:void(0)"
+            >
+              İlan Bilgileri
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class.active]="activeTab === 'description'"
+              (click)="setActiveTab('description')"
+              href="javascript:void(0)"
+            >
+              Açıklama
+            </a>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-3">
+          <div *ngIf="activeTab === 'info'">
+            <app-ilan-bilgileri-component
+              [ilan]="ilan"
+            ></app-ilan-bilgileri-component>
+          </div>
+          <div *ngIf="activeTab === 'description'">
+            <pre>
+              {{ ilan.description }}
+
+            </pre>
+          </div>
+        </div>
       </div>
     </div>
     <a routerLink="/ilanlar-page" class="btn btn-primary mt-3">Geri Dön</a>
   </div>
 
   <ng-template #notFound>
-    <div class="alert alert-danger" role="alert">
-      İlan bulunamadı.
-    </div>
+    <div class="alert alert-danger" role="alert">İlan bulunamadı.</div>
     <a routerLink="/ilanlar-page" class="btn btn-secondary">Geri Dön</a>
   </ng-template>
 </div>
