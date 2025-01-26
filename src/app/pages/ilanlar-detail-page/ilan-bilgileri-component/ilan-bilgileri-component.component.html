@@ -1,31 +1,90 @@
-<div *ngIf="ilan; else noData">
-  <p class="card-text"><strong>Fiyat:</strong> {{ ilan.price }}</p>
-  <p class="card-text"><strong>İlan Tarihi:</strong> {{ ilan.ilanTarihi }}</p>
-  <p class="card-text"><strong>İlan No:</strong> {{ ilan.ilanNo }}</p>
-  <p class="card-text"><strong>Emlak Tipi:</strong> {{ ilan.emlakTipi }}</p>
-  <p class="card-text"><strong>Brüt m²:</strong> {{ ilan.m2Brut }} m²</p>
-  <p class="card-text"><strong>Net m²:</strong> {{ ilan.m2Net }} m²</p>
-  <p class="card-text"><strong>Açık Alan m²:</strong> {{ ilan.acikAlanM2 }} m²</p>
-  <p class="card-text"><strong>Oda Sayısı:</strong> {{ ilan.odaSayisi }}</p>
-  <p class="card-text"><strong>Bina Yaşı:</strong> {{ ilan.binaYasi }}</p>
-  <p class="card-text"><strong>Kat Sayısı:</strong> {{ ilan.katSayisi }}</p>
-  <p class="card-text"><strong>Isıtma:</strong> {{ ilan.isitma }}</p>
-  <p class="card-text"><strong>Banyo Sayısı:</strong> {{ ilan.banyoSayisi }}</p>
-  <p class="card-text"><strong>Mutfak:</strong> {{ ilan.mutfak }}</p>
-  <p class="card-text"><strong>Balkon:</strong> {{ ilan.balkon ? 'Var' : 'Yok' }}</p>
-  <p class="card-text"><strong>Eşyalı:</strong> {{ ilan.esyali ? 'Evet' : 'Hayır' }}</p>
-  <p class="card-text"><strong>Kullanım Durumu:</strong> {{ ilan.kullanimDurumu }}</p>
-  <p class="card-text"><strong>Site İçerisinde:</strong> {{ ilan.siteIcerisinde ? 'Evet' : 'Hayır' }}</p>
-  <p *ngIf="ilan.siteIcerisinde" class="card-text"><strong>Site Adı:</strong> {{ ilan.siteAdi }}</p>
-  <p *ngIf="ilan.siteIcerisinde" class="card-text"><strong>Aidat (TL):</strong> {{ ilan.aidatTL }} TL</p>
-  <p class="card-text"><strong>Krediye Uygun:</strong> {{ ilan.krediyeUygun ? 'Evet' : 'Hayır' }}</p>
-  <p class="card-text"><strong>Tapu Durumu:</strong> {{ ilan.tapuDurumu }}</p>
-  <p class="card-text"><strong>Kimden:</strong> {{ ilan.kimden }}</p>
-  <p class="card-text"><strong>Takas:</strong> {{ ilan.takas ? 'Evet' : 'Hayır' }}</p>
-  <p class="card-text"><strong>Adres:</strong> {{ ilan.adresDetay }}, {{ ilan.adresIl }}, {{ ilan.adresIlce }}</p>
-  <p class="card-text"><strong>Açıklama:</strong> {{ ilan.description }}</p>
+<div class="info-row" *ngIf="ilan">
+  <div class="d-flex justify-content-between">
+    <strong>Fiyat:</strong>
+    <span>{{ ilan.price }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>İlan Tarihi:</strong>
+    <span>{{ ilan.ilanTarihi }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>İlan No:</strong>
+    <span>{{ ilan.ilanNo }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Emlak Tipi:</strong>
+    <span>{{ ilan.emlakTipi }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Brüt m²:</strong>
+    <span>{{ ilan.m2Brut }} m²</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Net m²:</strong>
+    <span>{{ ilan.m2Net }} m²</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Açık Alan m²:</strong>
+    <span>{{ ilan.acikAlanM2 }} m²</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Oda Sayısı:</strong>
+    <span>{{ ilan.odaSayisi }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Bina Yaşı:</strong>
+    <span>{{ ilan.binaYasi }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Kat Sayısı:</strong>
+    <span>{{ ilan.katSayisi }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Isıtma:</strong>
+    <span>{{ ilan.isitma }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Banyo Sayısı:</strong>
+    <span>{{ ilan.banyoSayisi }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Mutfak:</strong>
+    <span>{{ ilan.mutfak }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Balkon:</strong>
+    <span>{{ ilan.balkon ? 'Var' : 'Yok' }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Eşyalı:</strong>
+    <span>{{ ilan.esyali ? 'Evet' : 'Hayır' }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Kullanım Durumu:</strong>
+    <span>{{ ilan.kullanimDurumu }}</span>
+  </div>
+  <div class="d-flex justify-content-between" *ngIf="ilan.siteIcerisinde">
+    <strong>Site Adı:</strong>
+    <span>{{ ilan.siteAdi }}</span>
+  </div>
+  <div class="d-flex justify-content-between" *ngIf="ilan.siteIcerisinde">
+    <strong>Aidat (TL):</strong>
+    <span>{{ ilan.aidatTL }} TL</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Krediye Uygun:</strong>
+    <span>{{ ilan.krediyeUygun ? 'Evet' : 'Hayır' }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Tapu Durumu:</strong>
+    <span>{{ ilan.tapuDurumu }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Kimden:</strong>
+    <span>{{ ilan.kimden }}</span>
+  </div>
+  <div class="d-flex justify-content-between">
+    <strong>Takas:</strong>
+    <span>{{ ilan.takas ? 'Evet' : 'Hayır' }}</span>
+  </div>
 </div>
-
-<ng-template #noData>
-  <p class="text-danger">İlan bilgileri yüklenemedi.</p>
-</ng-template>
