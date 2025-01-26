@@ -32,15 +32,10 @@
         <!-- Tab Content -->
         <div class="tab-content mt-3">
           <div *ngIf="activeTab === 'info'">
-            <app-ilan-bilgileri-component
-              [ilan]="ilan"
-            ></app-ilan-bilgileri-component>
+            <app-ilan-bilgileri-component [ilan]="ilan"></app-ilan-bilgileri-component>
           </div>
           <div *ngIf="activeTab === 'description'">
-            <pre>
-              {{ ilan.description }}
-
-            </pre>
+            <app-aciklama [description]="ilan.description"></app-aciklama>
           </div>
         </div>
       </div>
