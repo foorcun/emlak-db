@@ -1,11 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ILANLAR } from '../../../../public/ilanlar/ilanlar';
 
 @Component({
   selector: 'app-ilanlar-page',
-  imports: [],
   templateUrl: './ilanlar-page.component.html',
-  styleUrl: './ilanlar-page.component.scss'
+  styleUrls: ['./ilanlar-page.component.scss'],
+  imports: [CommonModule]
 })
 export class IlanlarPageComponent {
-
+ilanlar = ILANLAR;
 }

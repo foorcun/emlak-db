@@ -1,1 +1,19 @@
-<p>ilanlar-page works!</p>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let ilan of ilanlar">
+      <div class="card">
+        <img class="card-img-top" [src]="ilan.image" [alt]="ilan.title" />
+        <div class="card-body">
+          <h5 class="card-title">{{ ilan.title }}</h5>
+          <p class="card-text text-end">{{ ilan.price }}</p>
+          <div class="adres" style="display: flex; flex-direction: row; gap:1rem;">
+            <div class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <p class="card-text">{{ ilan.adresIl }}, {{ ilan.adresIlce }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
