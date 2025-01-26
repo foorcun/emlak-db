@@ -1,20 +1,43 @@
 <div class="container mt-4">
-  <div *ngIf="ilan">
+  <div *ngIf="ilan; else notFound">
     <div class="card">
       <img class="card-img-top" [src]="ilan.image" [alt]="ilan.title" />
       <div class="card-body">
         <h1 class="card-title">{{ ilan.title }}</h1>
         <p class="card-text"><strong>Fiyat:</strong> {{ ilan.price }}</p>
-        <p class="card-text"><strong>Adres:</strong> {{ ilan.adresDetay }}</p>
-        <p class="card-text"><strong>Şehir:</strong> {{ ilan.adresIl }}</p>
-        <p class="card-text"><strong>İlçe:</strong> {{ ilan.adresIlce }}</p>
+        <p class="card-text"><strong>İlan Tarihi:</strong> {{ ilan.ilanTarihi }}</p>
+        <p class="card-text"><strong>İlan No:</strong> {{ ilan.ilanNo }}</p>
+        <p class="card-text"><strong>Emlak Tipi:</strong> {{ ilan.emlakTipi }}</p>
+        <p class="card-text"><strong>Brüt m²:</strong> {{ ilan.m2Brut }} m²</p>
+        <p class="card-text"><strong>Net m²:</strong> {{ ilan.m2Net }} m²</p>
+        <p class="card-text"><strong>Açık Alan m²:</strong> {{ ilan.acikAlanM2 }} m²</p>
+        <p class="card-text"><strong>Oda Sayısı:</strong> {{ ilan.odaSayisi }}</p>
+        <p class="card-text"><strong>Bina Yaşı:</strong> {{ ilan.binaYasi }}</p>
+        <p class="card-text"><strong>Kat Sayısı:</strong> {{ ilan.katSayisi }}</p>
+        <p class="card-text"><strong>Isıtma:</strong> {{ ilan.isitma }}</p>
+        <p class="card-text"><strong>Banyo Sayısı:</strong> {{ ilan.banyoSayisi }}</p>
+        <p class="card-text"><strong>Mutfak:</strong> {{ ilan.mutfak }}</p>
+        <p class="card-text"><strong>Balkon:</strong> {{ ilan.balkon ? 'Var' : 'Yok' }}</p>
+        <p class="card-text"><strong>Eşyalı:</strong> {{ ilan.esyali ? 'Evet' : 'Hayır' }}</p>
+        <p class="card-text"><strong>Kullanım Durumu:</strong> {{ ilan.kullanimDurumu }}</p>
+        <p class="card-text"><strong>Site İçerisinde:</strong> {{ ilan.siteIcerisinde ? 'Evet' : 'Hayır' }}</p>
+        <p *ngIf="ilan.siteIcerisinde" class="card-text"><strong>Site Adı:</strong> {{ ilan.siteAdi }}</p>
+        <p *ngIf="ilan.siteIcerisinde" class="card-text"><strong>Aidat (TL):</strong> {{ ilan.aidatTL }} TL</p>
+        <p class="card-text"><strong>Krediye Uygun:</strong> {{ ilan.krediyeUygun ? 'Evet' : 'Hayır' }}</p>
+        <p class="card-text"><strong>Tapu Durumu:</strong> {{ ilan.tapuDurumu }}</p>
+        <p class="card-text"><strong>Kimden:</strong> {{ ilan.kimden }}</p>
+        <p class="card-text"><strong>Takas:</strong> {{ ilan.takas ? 'Evet' : 'Hayır' }}</p>
+        <p class="card-text"><strong>Adres:</strong> {{ ilan.adresDetay }}, {{ ilan.adresIl }}, {{ ilan.adresIlce }}</p>
         <p class="card-text"><strong>Açıklama:</strong> {{ ilan.description }}</p>
       </div>
     </div>
-    <a routerLink="ilanlar-page" class="btn btn-primary mt-3">Geri Dön</a>
+    <a routerLink="/ilanlar-page" class="btn btn-primary mt-3">Geri Dön</a>
   </div>
-  <div *ngIf="!ilan">
-    <p class="text-danger">Ilan bulunamadı.</p>
-    <a routerLink="ilanlar-page" class="btn btn-secondary ">Geri Dön</a>
-  </div>
+
+  <ng-template #notFound>
+    <div class="alert alert-danger" role="alert">
+      İlan bulunamadı.
+    </div>
+    <a routerLink="/ilanlar-page" class="btn btn-secondary">Geri Dön</a>
+  </ng-template>
 </div>
