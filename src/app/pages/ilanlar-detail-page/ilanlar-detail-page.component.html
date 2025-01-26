@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <div *ngIf="ilan">
+    <div class="card">
+      <img class="card-img-top" [src]="ilan.image" [alt]="ilan.title" />
+      <div class="card-body">
+        <h1 class="card-title">{{ ilan.title }}</h1>
+        <p class="card-text"><strong>Fiyat:</strong> {{ ilan.price }}</p>
+        <p class="card-text"><strong>Adres:</strong> {{ ilan.adresDetay }}</p>
+        <p class="card-text"><strong>Şehir:</strong> {{ ilan.adresIl }}</p>
+        <p class="card-text"><strong>İlçe:</strong> {{ ilan.adresIlce }}</p>
+        <p class="card-text"><strong>Açıklama:</strong> {{ ilan.description }}</p>
+      </div>
+    </div>
+    <a routerLink="ilanlar-page" class="btn btn-primary mt-3">Geri Dön</a>
+  </div>
+  <div *ngIf="!ilan">
+    <p class="text-danger">Ilan bulunamadı.</p>
+    <a routerLink="ilanlar-page" class="btn btn-secondary ">Geri Dön</a>
+  </div>
+</div>

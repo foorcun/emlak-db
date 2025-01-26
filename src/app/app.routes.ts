@@ -7,5 +7,6 @@ export const routes: Routes = [
     { path: "danismanlarimiz-page", loadComponent: (() => import('./pages/danismanlarimiz-page/danismanlarimiz-page.component').then(m => m.DanismanlarimizPageComponent)) },
     { path: "danismanlarimiz-page/:id", loadComponent: () => import('./pages/danisman-detail-page/danisman-detail-page.component').then(m => m.DanismanDetailPageComponent) },
     { path: "ilanlar-page", loadComponent: (() => import('./pages/ilanlar-page/ilanlar-page.component').then(m => m.IlanlarPageComponent)) },
+    { path: "ilanlar-page/:id", loadComponent: (() => import('./pages/ilanlar-detail-page/ilanlar-detail-page.component').then(m => m.IlanlarDetailPageComponent)) },
 
 ];

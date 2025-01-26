@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ILANLAR } from '../../../../public/ilanlar/ilanlar';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-ilanlar-page',
   templateUrl: './ilanlar-page.component.html',
   styleUrls: ['./ilanlar-page.component.scss'],
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, RouterModule]
 })
 export class IlanlarPageComponent {
   ilanlar = ILANLAR;
