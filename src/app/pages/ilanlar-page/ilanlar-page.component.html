@@ -1,14 +1,55 @@
 <div class="container mt-4">
+  <!-- Filter Section -->
+  <div class="filter-section p-3 mb-4">
+    <div class="row">
+      <div class="col-md-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Şehre Göre Filtrele (City)"
+          [(ngModel)]="filterCriteria.city"
+          (input)="applyFilter()"
+        />
+      </div>
+      <div class="col-md-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="İlçeye Göre Filtrele (District)"
+          [(ngModel)]="filterCriteria.district"
+          (input)="applyFilter()"
+        />
+      </div>
+      <div class="col-md-3">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Maksimum Fiyat (TL)"
+          [(ngModel)]="filterCriteria.maxPrice"
+          (input)="applyFilter()"
+        />
+      </div>
+      <div class="col-md-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Kelimeye Göre Ara (Search)"
+          [(ngModel)]="filterCriteria.search"
+          (input)="applyFilter()"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Display Filtered Ilanlar -->
   <div class="row">
-    <div class="col-md-4" *ngFor="let ilan of ilanlar">
+    <div class="col-md-4" *ngFor="let ilan of filteredIlanlar">
       <div class="card">
-        <div class="card-img-container">
-          <img class="card-img-top" [src]="ilan.image" [alt]="ilan.title" />
-        </div>
+        <img class="card-img-top" [src]="ilan.image" [alt]="ilan.title" />
         <div class="card-body">
           <h5 class="card-title">{{ ilan.title }}</h5>
           <p class="card-text text-end">{{ ilan.price }}</p>
-          <div class="adres" style="display: flex; flex-direction: row; gap: 1rem;">
+          <div class="adres" style="display: flex; flex-direction: row; gap:1rem;">
             <div class="icon">
               <i class="fas fa-map-marker-alt"></i>
             </div>

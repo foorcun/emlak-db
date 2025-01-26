@@ -21,3 +21,20 @@
   object-fit: contain; /* Show the entire image without cropping */
   width: 100%; /* Ensure the image takes up the full width of the card */
 }
+
+.filter-section {
+  background-color: #6c757d; /* Background color */
+  border-radius: 5px; /* Optional: Rounded corners */
+  padding: 20px; /* Padding around the filter inputs */
+}
+
+input.form-control {
+  background-color: #f8f9fa; /* Optional: Light background for input fields */
+  border: none; /* Remove input border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+input.form-control:focus {
+  outline: none; /* Remove focus outline */
+  border: 1px solid #adb5bd; /* Add subtle border on focus */
+}
