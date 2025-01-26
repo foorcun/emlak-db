@@ -12,30 +12,35 @@ import { Router } from '@angular/router';
 export class DanismanlarimizPageComponent {
   circleSize = 150; // Size of the circular container
 
-  danismanlar = [
-    {
-      photo: 'images/person.png',
-      name: 'Ahmet Yılmaz',
-      emlakOfisi: 'XYZ Emlak',
-      role: 'Saha Direktörü',
-    },
-    {
-      photo: 'images/person.png',
-      name: 'Elif Demir',
-      emlakOfisi: 'ABC Realty',
-      role: 'Broker Owner',
-    },
-    {
-      photo: 'images/person.png',
-      name: 'Mehmet Çelik',
-      emlakOfisi: 'Mega Emlak',
-      role: 'Gayrimenkul Danışmanı',
-    },
-  ];
+danismanlar = [
+  {
+    id: 1,
+    photo: 'images/person.png',
+    name: 'Ahmet Yılmaz',
+    emlakOfisi: 'XYZ Emlak',
+    role: 'Saha Direktörü',
+  },
+  {
+    id: 2,
+    photo: 'images/person.png',
+    name: 'Elif Demir',
+    emlakOfisi: 'ABC Realty',
+    role: 'Broker Owner',
+  },
+  {
+    id: 3,
+    photo: 'images/person.png',
+    name: 'Mehmet Çelik',
+    emlakOfisi: 'Mega Emlak',
+    role: 'Gayrimenkul Danışmanı',
+  },
+];
+
+;
   constructor(private router: Router) { }
 
-  navigateToDetail(title: string) {
-    const encodedTitle = encodeURIComponent(title);
-    this.router.navigate([`/danismanlarimiz-page/${encodedTitle}`]);
-  }
+navigateToDetail(id: number) {
+  this.router.navigate([`/danismanlarimiz-page/${id}`]);
+}
+
 }

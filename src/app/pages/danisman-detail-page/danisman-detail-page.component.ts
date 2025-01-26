@@ -9,13 +9,42 @@ import { ActivatedRoute } from '@angular/router';
   imports: [CommonModule]
 })
 export class DanismanDetailPageComponent implements OnInit {
-  danismanTitle: string | null = null;
+  danismanId: number | null = null;
+  danisman: any = null;
+
+  danismanlar = [
+    {
+      id: 1,
+      photo: 'images/person.png',
+      name: 'Ahmet Yılmaz',
+      emlakOfisi: 'XYZ Emlak',
+      role: 'Saha Direktörü',
+    },
+    {
+      id: 2,
+      photo: 'images/person.png',
+      name: 'Elif Demir',
+      emlakOfisi: 'ABC Realty',
+      role: 'Broker Owner',
+    },
+    {
+      id: 3,
+      photo: 'images/person.png',
+      name: 'Mehmet Çelik',
+      emlakOfisi: 'Mega Emlak',
+      role: 'Gayrimenkul Danışmanı',
+    },
+  ];
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.danismanTitle = params.get('title');
+      const id = params.get('id');
+      this.danismanId = id ? +id : null;
+
+      // Find the consultant by id
+      this.danisman = this.danismanlar.find(d => d.id === this.danismanId);
     });
   }
 }
