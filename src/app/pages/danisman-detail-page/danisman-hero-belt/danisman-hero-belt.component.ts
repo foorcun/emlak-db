@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-danisman-hero-belt',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './danisman-hero-belt.component.scss'
 })
 export class DanismanHeroBeltComponent {
-
+  @Input() danismanName: string = '';
+  @Input() danismanSubtitle: string = '';
 }

@@ -10,8 +10,7 @@ import { DanismanHeroBeltComponent } from './danisman-hero-belt/danisman-hero-be
   imports: [CommonModule, DanismanHeroBeltComponent]
 })
 export class DanismanDetailPageComponent implements OnInit {
-  danismanId: number | null = null;
-  danisman: any = null;
+  selectedDanisman: any;
 
   danismanlar = [
     {
@@ -37,15 +36,14 @@ export class DanismanDetailPageComponent implements OnInit {
     },
   ];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      const id = params.get('id');
-      this.danismanId = id ? +id : null;
-
-      // Find the consultant by id
-      this.danisman = this.danismanlar.find(d => d.id === this.danismanId);
-    });
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id !== null) {
+      this.selectedDanisman = this.danismanlar.find(d => d.id === +id);
+    } else {
+      this.selectedDanisman = null;
+    }
   }
 }

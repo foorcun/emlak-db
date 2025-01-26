@@ -2,25 +2,28 @@
   position: relative;
   width: 100%;
   height: 300px; /* Adjust the height as needed */
-  overflow: hidden;
+  background: linear-gradient(to top, #0F1526 15%, transparent 100%),
+              url('/images/hero-image.png') no-repeat center center;
+  background-size: cover; /* Ensures the image covers the entire area */
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire area */
+.name-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* Ensures the image stays behind the gradient */
+  bottom: 20px; /* Position the text near the bottom of the belt */
+  left: 20px; /* Add some padding on the left */
+  color: white;
+  z-index: 2;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8); /* Add subtle shadow for better readability */
 }
 
-.gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #0F1526, transparent 70%);
-  z-index: 2; /* Ensures the gradient appears above the image */
+.name-overlay .name {
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold;
+  margin: 0;
+}
+
+.name-overlay .subtitle {
+  font-size: 1.2rem; /* Adjust subtitle font size */
+  margin: 0;
+  opacity: 0.8; /* Optional: Slightly fade the subtitle */
 }

@@ -1,15 +1,19 @@
-<app-danisman-hero-belt></app-danisman-hero-belt>
+<app-danisman-hero-belt 
+  [danismanName]="selectedDanisman?.name" 
+  [danismanSubtitle]="selectedDanisman?.role">
+</app-danisman-hero-belt>
+
 <div class="container mt-4">
   <h2 class="text-center">Danışman Detay</h2>
-  <div *ngIf="danisman">
+  <div *ngIf="selectedDanisman">
     <div class="text-center">
-      <img [src]="danisman.photo" alt="{{ danisman.name }}" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+      <img [src]="selectedDanisman.photo" alt="{{ selectedDanisman.name }}" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
     </div>
-    <p><strong>Danışman Adı:</strong> {{ danisman.name }}</p>
-    <p><strong>Emlak Ofisi:</strong> {{ danisman.emlakOfisi }}</p>
-    <p><strong>Role:</strong> {{ danisman.role }}</p>
+    <p><strong>Danışman Adı:</strong> {{ selectedDanisman.name }}</p>
+    <p><strong>Emlak Ofisi:</strong> {{ selectedDanisman.emlakOfisi }}</p>
+    <p><strong>Role:</strong> {{ selectedDanisman.role }}</p>
   </div>
-  <div *ngIf="!danisman">
+  <div *ngIf="!selectedDanisman">
     <p>Danışman bulunamadı.</p>
   </div>
 </div>
