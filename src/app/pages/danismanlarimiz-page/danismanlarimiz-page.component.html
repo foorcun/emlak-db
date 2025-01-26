@@ -2,10 +2,12 @@
   <div class="row">
     <div class="col-md-4" *ngFor="let danisman of danismanlar">
       <div class="card mb-4 card-long">
-        <app-danismanlarimiz-image-belt
-          [photo]="danisman.photo"
-          [circleSize]="circleSize"
-        ></app-danismanlarimiz-image-belt>
+        <div class="d-flex justify-content-center mt-3">
+          <app-danismanlarimiz-image-belt
+            [photo]="danisman.photo"
+            [circleSize]="circleSize"
+          ></app-danismanlarimiz-image-belt>
+        </div>
         <div class="card-body">
           <h5 class="card-title">{{ danisman.name }}</h5>
           <p class="card-text">
