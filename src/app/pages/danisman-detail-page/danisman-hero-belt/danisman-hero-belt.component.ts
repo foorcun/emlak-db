@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 export class DanismanHeroBeltComponent {
   @Input() danismanName: string = '';
   @Input() danismanSubtitle: string = '';
+  danismanExperience: number = 10; // Years of experience
 }

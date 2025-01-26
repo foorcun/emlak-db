@@ -9,25 +9,39 @@
 
 .name-overlay {
   position: absolute;
-  top: 0; /* Align the background to the top of the hero-belt */
+  top: 0; /* Align the text and card near the top */
   left: 0;
-  width: 100%; /* Make the background span the entire width of the hero-belt */
+  width: 100%;
   background: rgba(15, 21, 38, 0.5); /* Semi-transparent background */
   color: white;
   z-index: 2;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8); /* Add subtle shadow for better readability */
-  padding: 20px 0; /* Add vertical padding to create space above and below the text */
-  text-align: center; /* Center the text horizontally */
+  padding: 20px; /* Add some padding for spacing */
 }
 
 .name-overlay .name {
-  font-size: 2rem; /* Adjust font size */
+  font-size: 2rem;
   font-weight: bold;
   margin: 0;
 }
 
 .name-overlay .subtitle {
-  font-size: 1.2rem; /* Adjust subtitle font size */
-  margin: 0;
-  opacity: 0.8; /* Optional: Slightly fade the subtitle */
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  opacity: 0.8;
+}
+
+.experience-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #28a745; /* Green background */
+  color: white;
+  font-weight: bold;
+  width: 80px; /* Fixed width to make it a square */
+  height: 80px; /* Fixed height to match width */
+  border-radius: 8px; /* Slightly rounded corners */
+  font-size: 1rem;
+  margin-top: 10px; /* Add space above the card */
+  text-align: center;
 }
