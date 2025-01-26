@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DanismanHeroBeltComponent } from './danisman-hero-belt/danisman-hero-belt.component';
 
 @Component({
   selector: 'app-danisman-detail-page',
   templateUrl: './danisman-detail-page.component.html',
   styleUrls: ['./danisman-detail-page.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, DanismanHeroBeltComponent]
 })
 export class DanismanDetailPageComponent implements OnInit {
   danismanId: number | null = null;
