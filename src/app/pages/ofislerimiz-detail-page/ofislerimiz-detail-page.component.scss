@@ -1,3 +1,4 @@
+
 $primary-color: #0F1526; /* Primary color for the footer */
 
 .ofis-detail-container {
@@ -31,39 +32,73 @@ $primary-color: #0F1526; /* Primary color for the footer */
       gap: 1rem; /* Add space between details */
     }
 
-.detail-item {
-  display: flex; /* Align icon and text in a row */
-  align-items: center; /* Vertically center icon and text */
-  gap: 0.5rem; /* Add space between icon and text */
+    .detail-item {
+      display: flex; /* Align icon and text in a row */
+      align-items: center; /* Vertically center icon and text */
+      gap: 0.5rem; /* Add space between icon and text */
 
-  .icon {
-    flex: 0 0 auto; /* Prevent the icon from stretching */
-    font-size: 1.5rem; /* Set icon size */
-    color: $primary-color; /* Icon color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+      .icon {
+        flex: 0 0 auto; /* Prevent the icon from stretching */
+        font-size: 1.5rem; /* Set icon size */
+        color: $primary-color; /* Icon color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-  .text {
-    flex: 1; /* Allow text to take the remaining space */
-    font-size: 1rem;
-    strong {
-      margin-right: 0.25rem; /* Add space between the label and value */
-      font-weight: bold;
+      .text {
+        flex: 1; /* Allow text to take the remaining space */
+        font-size: 1rem;
+        strong {
+          margin-right: 0.25rem; /* Add space between the label and value */
+          font-weight: bold;
+        }
+      }
     }
-  }
-}
-
 
     .separator {
       height: 1px;
       background-color: #ddd;
       margin: 0.5rem 0;
     }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem; /* Space between buttons */
+      margin-top: 1.5rem;
+
+      .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &.btn-primary {
+          background-color: #007bff;
+          color: #fff;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+
+        &.btn-secondary {
+          background-color: #6c757d;
+          color: #fff;
+
+          &:hover {
+            background-color: #5a6268;
+          }
+        }
+      }
+    }
   }
 
   .go-back-btn {
+    margin-top: 1.5rem;
     padding: 0.5rem 1.5rem;
     font-size: 1rem;
     background-color: #007bff;

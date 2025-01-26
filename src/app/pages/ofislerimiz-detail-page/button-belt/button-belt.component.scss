@@ -1,0 +1,38 @@
+$primary-color: #0F1526; /* Primary color for the footer */
+
+.button-group {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  gap: 1rem; /* Space between buttons */
+  margin-top: 1.5rem;
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    width: 100%; /* Optional: Make buttons stretch to full width */
+    max-width: 200px; /* Optional: Limit the width for consistency */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.btn-primary {
+      background-color: #007bff;
+      color: #fff;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+
+    &.btn-secondary {
+      background-color: #6c757d;
+      color: #fff;
+
+      &:hover {
+        background-color: #5a6268;
+      }
+    }
+  }
+}

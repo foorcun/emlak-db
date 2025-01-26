@@ -25,6 +25,12 @@
         <strong>Email:</strong> info&#64;example.com
       </div>
     </div>
+
+    <!-- Add the new Button Belt component -->
+    <app-button-belt
+      (contact)="onContact()"
+      (share)="onShare()"
+    ></app-button-belt>
   </div>
 
   <button class="btn btn-secondary go-back-btn" (click)="goBack()">
