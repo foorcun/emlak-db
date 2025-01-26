@@ -29,16 +29,30 @@
       gap: 1rem; /* Add space between details */
     }
 
-    .detail-item {
-      font-size: 1rem;
-      display: flex;
-      flex-direction: column;
-      strong {
-        font-weight: bold;
-        color: #222;
-        margin-bottom: 0.5rem;
-      }
+.detail-item {
+  display: flex; /* Align icon and text in a row */
+  align-items: center; /* Vertically center icon and text */
+  gap: 0.5rem; /* Add space between icon and text */
+
+  .icon {
+    flex: 0 0 auto; /* Prevent the icon from stretching */
+    font-size: 1.5rem; /* Set icon size */
+    color: #007bff; /* Icon color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    flex: 1; /* Allow text to take the remaining space */
+    font-size: 1rem;
+    strong {
+      margin-right: 0.25rem; /* Add space between the label and value */
+      font-weight: bold;
     }
+  }
+}
+
 
     .separator {
       height: 1px;

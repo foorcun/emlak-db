@@ -1,22 +1,33 @@
 <div class="ofis-detail-container">
-  <h1 class="page-title">{{ title || 'Ofis Detayları' }}</h1>
+  <h1 class="page-title">{{ title || "Ofis Detayları" }}</h1>
 
   <div class="office-info">
     <p>Here are the details for the selected office.</p>
     <div class="details-list">
       <div class="detail-item">
+        <div class="icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
         <strong>Address:</strong> Sample Address, City, Country
       </div>
       <div class="separator"></div>
       <div class="detail-item">
+        <div class="icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
         <strong>Phone:</strong> +90 123 456 78 90
       </div>
       <div class="separator"></div>
       <div class="detail-item">
+        <div class="icon">
+          <i class="fas fa-envelope"></i>
+        </div>
         <strong>Email:</strong> info&#64;example.com
       </div>
     </div>
   </div>
 
-  <button class="btn btn-secondary go-back-btn" (click)="goBack()">Geri Dön</button>
+  <button class="btn btn-secondary go-back-btn" (click)="goBack()">
+    Geri Dön
+  </button>
 </div>
