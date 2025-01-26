@@ -9,11 +9,15 @@
 
 .name-overlay {
   position: absolute;
-  bottom: 20px; /* Position the text near the bottom of the belt */
-  left: 20px; /* Add some padding on the left */
+  top: 0; /* Align the background to the top of the hero-belt */
+  left: 0;
+  width: 100%; /* Make the background span the entire width of the hero-belt */
+  background: rgba(15, 21, 38, 0.5); /* Semi-transparent background */
   color: white;
   z-index: 2;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8); /* Add subtle shadow for better readability */
+  padding: 20px 0; /* Add vertical padding to create space above and below the text */
+  text-align: center; /* Center the text horizontally */
 }
 
 .name-overlay .name {
