@@ -19,7 +19,7 @@ export class OfislerimizPageComponent {
   cards: Card[] = [
     {
       imageUrl: '/images/emlak-image.png',
-      name: 'Orçun Emlak',
+      name: 'Orçın Emlak',
       address: '123 Main Street, Istanbul, Turkey',
       tel: '+90 123 456 78 90'
     },
